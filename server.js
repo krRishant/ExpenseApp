@@ -22,9 +22,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 const port = process.env.port || 8080;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 app.use('/user',userRoutes);
 // app.post('/transaction/gettransaction', (req, res) =>{
 //   console.log(req.body);
