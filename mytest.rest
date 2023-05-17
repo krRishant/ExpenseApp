@@ -1,0 +1,60 @@
+GET http://localhost:5050/transaction/check
+
+###
+
+POST http://localhost:5050/user/register
+Content-Type: application/json
+
+{
+    "name": "Niraj",
+    "email": "ne@gmail.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:5050/login
+Content-Type: application/json
+
+{
+    "email": "neerja@gmail.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:5050/transaction/addtransaction
+Content-Type: application/json
+
+
+{
+    "amount"
+: 
+"500",
+"category"
+: 
+"Food",
+"date"
+: 
+"0026-03-31",
+"description"
+: 
+"545",
+"reference"
+: 
+"15",
+"type"
+: 
+"income",
+"userid"
+: 
+"6460c3fc806b74dd0e2d717a"
+}
+
+###
+POST http://localhost:5050/transaction/gettransaction
+Content-Type: application/json
+
+
+{
+    "userid": "6460c3fc806b74dd0e2d717a"
+}
+
