@@ -13,7 +13,11 @@ const path = require('path');
 dotenv.config();
 
 // database connection
-mongoDb();
+mongoDb().then(()=>{
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`.bgCyan.red)
+  })
+}).catch((err)=>{console.log(err)});
 
 const app = express()
 //parsing the request
@@ -39,6 +43,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`.bgCyan.red)
-})
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`.bgCyan.red)
+// })
